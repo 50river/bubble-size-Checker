@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bubble Size Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-controls" aria-label="コントロール">
+      <div class="control">
+        <label for="gridCols">列</label>
+        <input type="range" id="gridCols" min="1" max="24" value="10" />
+        <output id="gridColsOut">10</output>
+      </div>
+      <div class="control">
+        <label for="minSize">最小(px)</label>
+        <input type="range" id="minSize" min="4" max="200" value="24" />
+        <output id="minSizeOut">24</output>
+      </div>
+      <div class="control">
+        <label for="maxSize">最大(px)</label>
+        <input type="range" id="maxSize" min="4" max="300" value="72" />
+        <output id="maxSizeOut">72</output>
+      </div>
+      <button id="groupBtn" type="button">グループに分かれる</button>
+    </div>
+
+    <div class="canvas" aria-label="バブルキャンバス">
+      <div id="canvasInner" class="canvas-inner" aria-live="polite"></div>
+      <div id="megaBubble" class="mega-bubble" aria-hidden="true"></div>
+    </div>
+
+    <div class="previews" aria-label="サイズプレビュー">
+      <div class="preview">
+        <div class="bubble-preview" id="minPreview" aria-label="最小バブル"></div>
+        <div>最小: <span id="minPreviewValue">24</span> px</div>
+      </div>
+      <div class="preview">
+        <div class="bubble-preview" id="maxPreview" aria-label="最大バブル"></div>
+        <div>最大: <span id="maxPreviewValue">72</span> px</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
